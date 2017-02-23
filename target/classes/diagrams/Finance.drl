@@ -1,0 +1,14 @@
+
+package com.ikare.finance
+
+
+
+
+rule "FinanceRule"
+when
+$la :Finance(budget > (employeeCost))
+//System.out.println("Memo is to be Generated for-------------  "+ $la.getCountryCode());
+then
+$la.setCheckMemoValid(true);
+System.out.println("Memo is to be Generated for  "+ $la.getCountryCode());
+end
